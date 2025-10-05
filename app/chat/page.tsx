@@ -161,7 +161,7 @@ export default function ChatPage() {
     if (!token) return
 
     try {
-      const eventSource = new EventSource(`${apiEndpoints.realtimeSSE}?token=${token}`)
+      const eventSource = new EventSource(`${apiEndpoints.realtimeSSE}&token=${token}`)
       eventSourceRef.current = eventSource
 
       eventSource.onopen = () => {
